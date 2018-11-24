@@ -70,11 +70,13 @@ var myObjcet = {
         var that = this;
 
         this.value += 1;
-        console.log('func1() called. this.value : ' + this.value);
+        console.log('func1() called. this.value : ' + this.value); 
+        //메소드이기 떄문에 객체에 바인딩 됨
 
         func2 = function () {
             that.value += 1;
-            console.log('func2() called. this.value : ' + that.value);
+            console.log('func2() called. this.value : ' + that.value); 
+            //that변수에 this를 주었기 때문에 객체의 value를 가리키고 있음
 
             func3 = function () {
                 that.value += 1;
